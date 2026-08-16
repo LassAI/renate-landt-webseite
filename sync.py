@@ -83,6 +83,7 @@ def main():
     os.makedirs(BILDER, exist_ok=True)
     vorhandene = set(os.listdir(BILDER))
     werke = []
+    kategorien = []  # Reihenfolge = Reihenfolge in alben.json
     aktuelle_dateien = set()
     fehler = []
 
@@ -94,6 +95,8 @@ def main():
             fehler.append(str(e))
             continue
         kategorie = album.get("kategorie") or name
+        if kategorie not in kategorien:
+            kategorien.append(kategorie)
         print(f"Album '{name}' ({token}): {len(photos)} Fotos, Kategorie '{kategorie}'")
 
         for p in photos:
@@ -140,7 +143,7 @@ def main():
     werke.sort(key=lambda w: (w["eingestellt"] or "", w["aufgenommen"] or ""), reverse=True)
 
     with open(WERKE_JSON, "w") as f:
-        json.dump({"werke": werke}, f, ensure_ascii=False, indent=1)
+        json.dump({"kategorien": kategorien, "werke": werke}, f, ensure_ascii=False, indent=1)
     print(f"{len(werke)} Werke -> werke.json")
     if fehler:
         print("Warnungen:\n" + "\n".join(fehler), file=sys.stderr)

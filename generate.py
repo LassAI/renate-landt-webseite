@@ -10,11 +10,16 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 PUBLIC = os.path.join(HERE, "public")
 
 with open(os.path.join(HERE, "werke.json")) as f:
-    werke = json.load(f)["werke"]
+    daten = json.load(f)
+werke = daten["werke"]
 with open(os.path.join(HERE, "seite", "inhalte.json")) as f:
     inhalte = json.load(f)
 
-kategorien = []
+# Kategorien in Album-Reihenfolge (aus alben.json via sync.py);
+# nur Kategorien mit mindestens einem Werk erscheinen in der Navigation.
+vorgabe = daten.get("kategorien") or []
+vorhandene_kats = {w["kategorie"] for w in werke}
+kategorien = [k for k in vorgabe if k in vorhandene_kats]
 for w in werke:
     if w["kategorie"] not in kategorien:
         kategorien.append(w["kategorie"])
