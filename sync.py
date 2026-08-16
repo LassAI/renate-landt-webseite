@@ -80,6 +80,14 @@ def main():
     with open(os.path.join(HERE, "alben.json")) as f:
         config = json.load(f)
 
+    # Manuelle Titel (photoGuid -> Titel), da Apple beim Teilen weder
+    # Beschriftungen noch Kommentare mitliefert. Optional.
+    titel_datei = os.path.join(HERE, "titel.json")
+    titel = {}
+    if os.path.exists(titel_datei):
+        with open(titel_datei) as f:
+            titel = {k: v for k, v in json.load(f).items() if not k.startswith("_")}
+
     os.makedirs(BILDER, exist_ok=True)
     vorhandene = set(os.listdir(BILDER))
     werke = []
@@ -121,7 +129,7 @@ def main():
                 print(f"  neu geladen: {fname} ({len(blob)//1024} KB)")
             werke.append({
                 "datei": fname,
-                "titel": (p.get("caption") or "").strip() or "Ohne Titel",
+                "titel": titel.get(guid) or (p.get("caption") or "").strip() or "Ohne Titel",
                 "kategorie": kategorie,
                 "aufgenommen": p.get("dateCreated"),
                 "eingestellt": p.get("batchDateCreated"),

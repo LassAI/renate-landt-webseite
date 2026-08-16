@@ -8,13 +8,14 @@
     ["seit 1970ern", "lebt und arbeitet in Berlin"]
   ],
   "impressum": {
-    "name": "Renate Landt",
-    "strasse": "[Straße Hausnummer]",
-    "plz_ort": "[PLZ] Berlin",
-    "email": "[E-Mail-Adresse]"
+    "name": "Lasse Landt",
+    "strasse": "Auf dem Grat 31",
+    "plz_ort": "14195 Berlin",
+    "email": "renate.landt@web.de",
+    "urheberin": "Renate Landt"
   },
   "datenschutz": {
     "hoster": "GitHub Inc. (GitHub Pages)",
-    "stand": "[Datum beim Go-Live]"
+    "stand": "16. August 2026"
   }
 }

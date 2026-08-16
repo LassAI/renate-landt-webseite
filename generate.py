@@ -172,14 +172,14 @@ HTML = f"""<!DOCTYPE html>
   <p>Diese Website ist ein privates, nicht-kommerzielles Angebot. Es werden keine
   Waren oder Dienstleistungen angeboten.</p>
   <h3>Urheberrecht</h3>
-  <p>Alle abgebildeten Werke und Fotografien: © {imp['name']}. Jede Vervielfältigung,
+  <p>Alle abgebildeten Werke und Fotografien: © {imp.get('urheberin', imp['name'])}. Jede Vervielfältigung,
   Bearbeitung oder anderweitige Nutzung — auch auszugsweise — bedarf der vorherigen
   ausdrücklichen Zustimmung.</p>
 </section>
 
 <section id="datenschutz" class="textseite">
   <h2>Datenschutzerklärung</h2>
-  <h3>Verantwortliche</h3>
+  <h3>Verantwortlicher</h3>
   <p>{imp['name']}, {imp['strasse']}, {imp['plz_ort']}, E-Mail: {imp['email']}</p>
   <h3>Grundsatz</h3>
   <p>Diese Website dient ausschließlich der Präsentation künstlerischer Arbeiten.
