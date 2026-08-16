@@ -1,0 +1,20 @@
+{
+  "titel": "Renate Landt",
+  "untertitel": "Malerei",
+  "ueber_absatz": "Renate Landt, geboren 1948 in Oldenburg (Holstein), lebt seit den 1970er Jahren in Berlin. Sie studierte Germanistik, Romanistik und Philosophie. [Platzhalter: zwei, drei persönliche Sätze — wie sie zur Malerei kam, was sie antreibt, wo sie arbeitet.]",
+  "lebenslauf": [
+    ["1948", "geboren in Oldenburg (Holstein)"],
+    ["[XXXX]", "Studium der Germanistik, Romanistik und Philosophie [in Ort]"],
+    ["seit 1970ern", "lebt und arbeitet in Berlin"]
+  ],
+  "impressum": {
+    "name": "Renate Landt",
+    "strasse": "[Straße Hausnummer]",
+    "plz_ort": "[PLZ] Berlin",
+    "email": "[E-Mail-Adresse]"
+  },
+  "datenschutz": {
+    "hoster": "GitHub Inc. (GitHub Pages)",
+    "stand": "[Datum beim Go-Live]"
+  }
+}

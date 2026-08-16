@@ -1,0 +1,53 @@
+name: Galerie synchronisieren und veröffentlichen
+
+on:
+  schedule:
+    - cron: "0 3 * * *"   # täglich 03:00 UTC (05:00 deutscher Sommerzeit)
+  workflow_dispatch: {}    # manueller Start über den Actions-Tab
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Alben synchronisieren
+        run: python3 sync.py
+
+      - name: Neue Bilder committen
+        run: |
+          git config user.name "galerie-sync"
+          git config user.email "actions@github.com"
+          git add -A bilder/ werke.json
+          git diff --cached --quiet || git commit -m "Sync: Alben aktualisiert"
+          git push
+
+      - name: Seite generieren
+        run: python3 generate.py
+
+      - name: Pages-Artefakt hochladen
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Auf GitHub Pages veröffentlichen
+        id: deployment
+        uses: actions/deploy-pages@v4

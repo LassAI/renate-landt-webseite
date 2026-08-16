@@ -1,0 +1,6 @@
+{
+  "_hinweis": "Ein Eintrag je geteiltem Album. Reihenfolge = Reihenfolge in der Navigation. 'kategorie' überschreibt den Albumnamen (optional).",
+  "alben": [
+    { "token": "B2TJtdOXmGis7EV", "kategorie": null }
+  ]
+}
