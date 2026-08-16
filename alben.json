@@ -1,6 +1,8 @@
 {
-  "_hinweis": "Ein Eintrag je geteiltem Album. Reihenfolge = Reihenfolge in der Navigation. 'kategorie' überschreibt den Albumnamen (optional).",
-  "alben": [
-    { "token": "B2TJtdOXmGis7EV", "kategorie": null }
-  ]
+    "_hinweis": "Ein Eintrag je geteiltem Album. Reihenfolge = Reihenfolge in der Navigation. 'kategorie' überschreibt den Albumnamen (optional).",
+    "alben": [
+          { "token": "B2TJtdOXmGis7EV", "kategorie": null },
+          { "token": "B2T5oqs3qDLKIW", "kategorie": null },
+          { "token": "B2T532ODWoaTCZ", "kategorie": null }
+    ]
 }
