@@ -6,13 +6,49 @@
  ],
  "werke": [
   {
-   "datei": "4686AED4-441D-439E-A891-FD6B9FB3FFE7.jpg",
+   "datei": "5F42D699-F6E2-427C-8E3C-722452E0AE19.jpg",
    "titel": "Ohne Titel",
-   "kategorie": "Landschaft",
-   "aufgenommen": "2026-08-21T16:25:58Z",
-   "eingestellt": "2026-09-04T15:48:40Z",
+   "kategorie": "Figürlich",
+   "aufgenommen": "2020-06-03T14:04:26Z",
+   "eingestellt": "2026-10-25T20:19:20Z",
+   "breite": 2049,
+   "hoehe": 1537
+  },
+  {
+   "datei": "67AC6FBD-8925-451E-A850-61C0BF430EBB.jpg",
+   "titel": "Ohne Titel",
+   "kategorie": "Figürlich",
+   "aufgenommen": "2020-03-06T17:02:03Z",
+   "eingestellt": "2026-10-25T20:18:55Z",
+   "breite": 2049,
+   "hoehe": 1537
+  },
+  {
+   "datei": "DF0B973B-A94B-4710-888C-6F4F461E79F7.jpg",
+   "titel": "Ohne Titel",
+   "kategorie": "Figürlich",
+   "aufgenommen": "2026-01-30T10:58:26Z",
+   "eingestellt": "2026-10-25T20:17:49Z",
    "breite": 1536,
    "hoehe": 2048
+  },
+  {
+   "datei": "3A312CD7-4DD7-4600-9F9C-E10E0B7BBAAE.jpg",
+   "titel": "Ohne Titel",
+   "kategorie": "Landschaft",
+   "aufgenommen": "2021-06-19T14:28:17Z",
+   "eingestellt": "2026-10-25T20:17:06Z",
+   "breite": 2049,
+   "hoehe": 1537
+  },
+  {
+   "datei": "9E3DEBC0-C223-4A85-A2ED-858B11C7F5E9.jpg",
+   "titel": "Ohne Titel",
+   "kategorie": "Figürlich",
+   "aufgenommen": "2021-06-19T14:46:59Z",
+   "eingestellt": "2026-10-25T20:16:44Z",
+   "breite": 2049,
+   "hoehe": 1537
   },
   {
    "datei": "352BCDB3-7990-440D-8190-406A7582CB14.jpg",
